@@ -1,0 +1,15 @@
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i + " executed by " + Thread.currentThread().getName());
+        }
+    }
+}
+
+public class Thread {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // starts the thread, leading to the execution of the run method
+    }
+}
